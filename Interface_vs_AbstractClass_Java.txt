@@ -1,0 +1,198 @@
+DIFFERENCE BETWEEN INTERFACE AND ABSTRACT CLASS (JAVA)
+=====================================================
+
+Key Differences:
+----------------
+| Aspect             | Abstract Class                 | Interface                      |
+|--------------------|--------------------------------|--------------------------------|
+| Keyword            | abstract class                 | interface                      |
+| Inheritance        | Single inheritance (extends)   | Multiple inheritance (implements) |
+| Methods            | Abstract + Concrete methods    | Abstract methods (Java 8+ default/static allowed) |
+| Variables          | Any type of variables          | public static final only       |
+| Constructors       | Can have constructors          | Cannot have constructors       |
+| Access Modifiers   | Any access modifier            | public by default              |
+
+Detailed Comparison:
+--------------------
+
+1. Method Implementation:
+-------------------------
+Abstract Class:
+```java
+abstract class Shape {
+    double area;
+
+    void display() {
+        System.out.println("This is a shape");
+    }
+
+    abstract void calculateArea();
+}
+```
+
+Interface:
+```java
+interface Drawable {
+    void draw();
+
+    default void print() {
+        System.out.println("Printing...");
+    }
+
+    static void info() {
+        System.out.println("Drawable interface");
+    }
+}
+```
+
+2. Variables:
+-------------
+Abstract Class:
+```java
+abstract class Vehicle {
+    protected String brand;
+    private int wheels;
+    static int count = 0;
+    final String type = "Vehicle";
+}
+```
+
+Interface:
+```java
+interface Flyable {
+    int MAX_HEIGHT = 10000;
+    String TYPE = "FLYING";
+}
+```
+
+3. Inheritance:
+---------------
+Abstract Class:
+```java
+abstract class Animal {
+    abstract void makeSound();
+}
+
+class Dog extends Animal {
+    void makeSound() {
+        System.out.println("Woof!");
+    }
+}
+```
+
+Interface:
+```java
+interface Swimmer {
+    void swim();
+}
+
+interface Runner {
+    void run();
+}
+
+class Duck implements Swimmer, Runner {
+    public void swim() {
+        System.out.println("Duck swimming");
+    }
+    public void run() {
+        System.out.println("Duck running");
+    }
+}
+```
+
+4. Constructors:
+----------------
+Abstract Class:
+```java
+abstract class Person {
+    String name;
+
+    Person(String name) {
+        this.name = name;
+    }
+
+    abstract void work();
+}
+
+class Developer extends Person {
+    Developer(String name) {
+        super(name);
+    }
+
+    void work() {
+        System.out.println(name + " is coding");
+    }
+}
+```
+
+Interface:
+```java
+interface Workable {
+    void doWork();
+    // Interfaces cannot have constructors
+}
+```
+
+When to Use Which:
+------------------
+
+Use Abstract Class When:
+- You want to share code among related classes
+- You need constructors or instance variables
+- You want to provide common functionality with some abstract methods
+- Classes are closely related (IS-A relationship)
+
+Use Interface When:
+- You want to specify what a class must do, not how
+- You need multiple inheritance
+- Classes are unrelated but share common behavior (CAN-DO relationship)
+- You want to achieve loose coupling
+
+Real-World Example:
+-------------------
+```java
+abstract class Animal {
+    protected String name;
+
+    Animal(String name) {
+        this.name = name;
+    }
+
+    void sleep() {
+        System.out.println(name + " is sleeping");
+    }
+
+    abstract void makeSound();
+}
+
+interface Flyable {
+    void fly();
+}
+
+interface Swimmable {
+    void swim();
+}
+
+class Duck extends Animal implements Flyable, Swimmable {
+    Duck(String name) {
+        super(name);
+    }
+
+    void makeSound() {
+        System.out.println("Quack!");
+    }
+
+    public void fly() {
+        System.out.println(name + " is flying");
+    }
+
+    public void swim() {
+        System.out.println(name + " is swimming");
+    }
+}
+```
+
+Summary:
+--------
+- Abstract Class: "IS-A" relationship, partial implementation, single inheritance
+- Interface: "CAN-DO" relationship, contract/specification, multiple inheritance

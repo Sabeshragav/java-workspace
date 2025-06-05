@@ -1,0 +1,7 @@
+note = > oops 
+
+# If you want to see what files would be deleted before actually deleting them, you can first run:
+find . -name "*.class" -type f                
+
+# To delete all .class files recursively in the current folder and its sub-folders, use this command:
+find . -name "*.class" -type f -delete
