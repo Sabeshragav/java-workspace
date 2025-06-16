@@ -9,13 +9,14 @@ public class chk<T extends Number> {
 
     @SuppressWarnings("unchecked")
     public T add() {
-        if (num1 instanceof Integer) {
+        if (num1 instanceof Integer)
             return (T) (Integer) (num1.intValue() + num2.intValue());
-        } else if (num1 instanceof Double) {
+
+        else if (num1 instanceof Double)
             return (T) (Double) (num1.doubleValue() + num2.doubleValue());
-        } else {
+
+        else
             return null;
-        }
     }
 
     public static void main(String[] args) {

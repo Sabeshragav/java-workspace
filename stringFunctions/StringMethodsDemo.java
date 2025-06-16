@@ -1,4 +1,5 @@
-// public class StringMethodsDemo {
+
+// class StringMethodsDemo {
 //     public static void main(String[] args) {
 //         // Initialize a string for demonstration
 //         String original = " Hello, World! ";
@@ -16,7 +17,7 @@
 
 //         // 4. toLowerCase(): Converts all characters to lowercase
 //         String lowerCase = original.toLowerCase();
-//         System.out.println("Lowercase string: " + lowerCase);
+//         System.out.println("Lowercase string: " + original.toLowerCase());
 
 //         // 5. charAt(index): Returns the character at the specified index
 //         char charAt5 = original.charAt(5);
@@ -78,10 +79,11 @@
 //         String valueOfChar = String.valueOf('A');
 //         String valueOfFloat = String.valueOf(123.45f);
 
-//         System.out.println("Value of int: " + valueOfInt.getClass().getSimpleName());
-//         System.out.println("Value of boolean: " + valueOfBoolean.getClass().getSimpleName());
-//         System.out.println("Value of char: " + valueOfChar.getClass().getSimpleName());
-//         System.out.println("Value of float: " + valueOfFloat.getClass().getSimpleName());
+//         // System.out.printf("Value = %s\n", valueOfBoolean);
+//         System.out.println("Value of int: " + valueOfInt + " " + valueOfInt.getClass().getSimpleName());
+//         System.out.println("Value of boolean: " + valueOfBoolean + " " + valueOfBoolean.getClass().getSimpleName());
+//         System.out.println("Value of char: " + valueOfChar + " " + valueOfChar.getClass().getSimpleName());
+//         System.out.println("Value of float: " + valueOfFloat + " " + valueOfFloat.getClass().getSimpleName());
 //     }
 // }
 
@@ -107,7 +109,8 @@ public class StringMethodsDemo {
         String str3 = "Hello";
         String str4 = "hello";
         System.out.println("Example 3: String Comparison");
-        System.out.println("str3 equals str4: " + str3.equals(str4)); // Case-sensitive
+        System.out.println("str3 equals str4: " + str3.equals(str4));
+        // Case-sensitive
         System.out.println("str3 equals str4 (ignore case): " +
                 str3.equalsIgnoreCase(str4)); // Case-insensitive
         System.out.println();
@@ -157,7 +160,7 @@ public class StringMethodsDemo {
         String name = "Alice";
         int age = 25;
         System.out.println("Example 8: String Formatting");
-        String formattedString = String.format("My name is %s and I am %d years old.", name, age);
+        String formattedString = String.format("My name is %s and I am %d yearsold.", name, age);
         System.out.println(formattedString);
     }
 }

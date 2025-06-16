@@ -1,3 +1,6 @@
+
+package stringFunctions;
+
 public class StringBufferDemo {
     public static void main(String[] args) {
         // Example 1: Creating a StringBuffer
