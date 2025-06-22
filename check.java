@@ -1,8 +1,8 @@
-class check{
+import java.util.regex.Pattern;
+
+public class check {
+
     public static void main(String[] args) {
-        int a = 1;
-        if (a & 1)
-            a <<= 1;
-        System.out.printf("%d", a);
+        System.out.println(Pattern.matches("[a-zA-Z0-9]+", "a"));
     }
 }
