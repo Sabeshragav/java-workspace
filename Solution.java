@@ -1,6 +1,11 @@
-import java.util.regex.Pattern;
 
 class Solution {
+    static boolean checkAlphaNum(char c) {
+        return (c >= 'a' && c <= 'z') ||
+                (c >= 'A' && c <= 'Z') ||
+                (c >= '0' && c <= '9');
+    }
+
     public static boolean isPalindrome(String s) {
         int left = 0;
         int right = s.length() - 1;
@@ -8,11 +13,11 @@ class Solution {
         while (left < right) {
             // Skip non-alphanumeric characters from left
 
-            while (left < right && !Pattern.matches("[a-zA-z0-9]", String.valueOf(s.charAt(left)))) {
+            while (left < right && !checkAlphaNum(s.charAt(left))) {
                 left++;
             }
             // Skip non-alphanumeric characters from right
-            while (left < right && !Pattern.matches("[a-zA-z0-9]", String.valueOf(s.charAt(right)))) {
+            while (left < right && !checkAlphaNum(s.charAt(right))) {
                 right--;
             }
             // Compare characters (case-insensitive)

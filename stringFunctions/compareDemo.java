@@ -18,5 +18,11 @@ class compareDemo {
         System.out.println(s1.equals(s2)); // false (case matters)
         System.out.println(s1.equals(s3)); // true
 
+        // Using ==
+        System.out.println(s1 == s3);
+        System.out.println(s1 == s2);
+        s2 = "Apple ";
+        System.out.println(s1 == s2.trim());
+
     }
 }

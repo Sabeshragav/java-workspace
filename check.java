@@ -1,8 +1,16 @@
-import java.util.regex.Pattern;
+import java.util.*;
 
 public class check {
 
     public static void main(String[] args) {
-        System.out.println(Pattern.matches("[a-zA-Z0-9]+", String.valueOf('_')));
+        String s = "anagaram";
+        char[] chArr = s.toCharArray();
+        Arrays.sort(chArr);
+        for (char c : chArr)
+            System.out.print(c);
+
+        System.err.println();
+        String str = new String(chArr);
+        System.out.println(str.getClass().getSimpleName());
     }
 }
