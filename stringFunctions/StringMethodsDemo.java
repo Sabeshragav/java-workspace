@@ -118,7 +118,7 @@ public class StringMethodsDemo {
         // Example 4: String Searching
         String str5 = "Java programming is fun";
         System.out.println("Example 4: String Searching");
-        int index = str5.indexOf("programming");
+        int index = str5.indexOf('p');
         System.out.println("Index of 'programming': " + index);
         int lastIndex = str5.lastIndexOf('a');
         System.out.println("Last index of 'a': " + lastIndex);

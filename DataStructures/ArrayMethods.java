@@ -36,8 +36,11 @@ public class ArrayMethods {
 
                 // 6. Arrays.equals(array1, array2): Compares two arrays for equality
                 int[] arr4 = { 1, 2, 3 };
-                int[] arr5 = { 1, 2, 3 };
+                int[] arr5 = arr4;
+                arr4[0] = 4;
                 System.out.println("Arrays are equal: " + Arrays.equals(arr4, arr5));
+                System.out.println(arr4[0]);
+                System.out.println(arr5[0]);
 
                 // 7. Arrays.asList(array): Converts array to a fixed-size List
                 String[] strArray = { "a", "b", "c" };
