@@ -74,5 +74,34 @@ public class ArrayListMethods {
         // 15. Cloning the ArrayList
         ArrayList<String> clonedList = (ArrayList<String>) list.clone();
         System.out.println("Cloned list: " + clonedList);
+        System.out.println();
+
+        // ======== 1. ArrayList to Array ========
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("Apple");
+        arrayList.add("Banana");
+        arrayList.add("Cherry");
+
+        // Convert to array
+        String[] array = arrayList.toArray(new String[list.size()]);
+
+        System.out.println("ArrayList to Array:");
+        for (String fruitName : array) {
+            System.out.println(fruitName);
+        }
+
+        // ======== 2. Array to ArrayList ========
+        String[] fruits = { "Mango", "Orange", "Pineapple" };
+
+        // Convert to ArrayList (resizable)
+        ArrayList<String> fruitList = new ArrayList<>(Arrays.asList(fruits));
+
+        // Modify the list
+        fruitList.add("Strawberry");
+
+        System.out.println("\nArray to ArrayList:");
+        for (String fruitName : fruitList) {
+            System.out.println(fruitName);
+        }
     }
 }
