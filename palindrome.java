@@ -30,6 +30,7 @@ class palindrome {
     public static void main(String[] args) {
         System.out.println(isPalindrome1("racecar"));
         System.out.println(isPalindrome2("racecar"));
+        System.out.println(isPalindrome2("level"));
 
     }
 }
