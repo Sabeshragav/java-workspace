@@ -1,9 +1,9 @@
 
 public class BinarySearch {
     public static void main(String[] args) {
-        int[] arr = { 4, 5, 6, 7, 0, 1, 2 };
+        int[] arr = { 2, 2, 2, 2, 3, 4, 2 };
         int left = 0, right = arr.length - 1;
-        int target = 2;
+        int target = 3;
         System.out.println(RecursiveBinarySearch(arr, left, right, target));
         System.out.println(IterativeBinarySearch(arr, left, right, target));
         System.out.println(RotatedBinarySeach(arr, left, right, target));
@@ -16,6 +16,12 @@ public class BinarySearch {
 
             if (arr[mid] == target)
                 return mid;
+
+            // To Handle duplicates: we can't decide the sorted half
+            // if (arr[left] == arr[mid] && arr[mid] == arr[right]) {
+            // left++;
+            // right--;
+            // }
 
             if (arr[left] <= arr[mid]) {
                 if (arr[left] <= target && target <= arr[mid])
