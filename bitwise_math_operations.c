@@ -112,7 +112,7 @@ int modulo(int dividend, int divisor) {
 }
 
 // 17. Count set bits
-// Example: 5 -> 2
+// Example: 5 -> 2  (101  => 2 bits are set)
 int countBits(int x) {
     int count = 0;
     while (x) {
