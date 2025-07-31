@@ -1,20 +1,20 @@
+import java.util.Arrays;
 
 class bitRepresentation {
     public static void main(String[] args) {
-        int a = 10;
-        String str = "";
-        int count = 0;
+        int a = 7;
+        char[] arr = new char[32];
+        Arrays.fill(arr, '0');
+        int pos = 31;
 
         while (a > 0) {
-            str = (a % 2) + str;
+            arr[pos] = (char) ('0' + (a % 2));
+            // System.out.println((char) a % 2);
             a /= 2;
-            count++;
-        }
-        while (count < 32) {
-            str = 0 + str;
-            count++;
+            pos--;
+
         }
 
-        System.out.println(str);
+        System.out.println(new String(arr));
     }
 }
