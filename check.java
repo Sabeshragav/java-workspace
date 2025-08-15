@@ -2,13 +2,9 @@
 public class check {
 
     public static void main(String[] args) {
-        int a = -78;
+        System.out.println((int) '0');
+        System.out.println((char)47);
 
-        if ((a & 1) == 1) {
-            System.out.println("odd");
-        } else {
-            System.out.println("even");
-        }
     }
 
 }
