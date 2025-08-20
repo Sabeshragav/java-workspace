@@ -1,9 +1,14 @@
+import java.util.Stack;
 
 public class check {
 
     public static void main(String[] args) {
-        System.out.println((int) '0');
-        System.out.println((char)47);
+        Stack<Character> stack = new Stack<>();
+        stack.push('(');
+        stack.push(')');
+        System.out.print(stack.peek());
+        System.out.print(stack.pop());
+        System.out.print(stack.peek());
 
     }
 
